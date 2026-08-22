@@ -1,6 +1,6 @@
 # Case-Law Whitelist — Verified Citation Index (BAG / BVerfG / CJEU)
 
-**Law as of:** 2026-08-22 · Sources: research slices 01-german.md, 02-eu.md, 03-pitfalls.md, RESEARCH.md § 4.3 (all URLs verified 2026-08-22 in those slices; additionally re-verified by web search 2026-08-22 for entries marked `[re-verified]`).
+**Law as of:** 2026-08-22 · Sources: BAG/BVerfG/CJEU primary pages and practitioner commentary, verified by web search 2026-08-22; entries marked `[re-verified]` were additionally re-verified by web search on the same date.
 
 ## Citation rule (the hallucination firewall)
 
@@ -143,6 +143,6 @@ These citations are known traps. They do not exist, are wrong attributions, or w
 
 ## Maintenance
 
-- Entries are added only from BAG/BVerfG/CJEU press releases or primary court pages verified by URL; a case number that cannot be sourced stays out (see RESEARCH.md § 10: "any case number the build team cannot source stays out of the whitelist").
+- Entries are added only from BAG/BVerfG/CJEU press releases or primary court pages verified by URL; a case number that cannot be sourced stays out of the whitelist.
 - Superseded holdings are purged, not annotated. Update the `Law as of` header in the same pass as SKILL.md's `law_as_of` constant.
 - New known traps (confirmed nonexistent/wrong case numbers encountered in practice) are appended to the BLACKLIST.

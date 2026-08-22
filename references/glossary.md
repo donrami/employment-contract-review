@@ -1,6 +1,6 @@
 # Glossary — DE↔EN Employment-Law Terms, Statute Abbreviations, EU Directives
 
-**Law as of:** 2026-08-22 · Source: research slices 01-german.md, 02-eu.md, 03-pitfalls.md, 04-arch.md, RESEARCH.md.
+**Law as of:** 2026-08-22 · Source: statutes.md, eu-law.md, pitfalls.md, and case-law.md (all verified 2026-08-22).
 
 Purpose: language detection (Phase 0 keyword scan), DE↔EN reproducibility of findings, mistranslation guard for subtle terms. Statute floors live in statutes.md, case holdings in case-law.md — this file maps terms and names only.
 

@@ -73,7 +73,6 @@ Stdlib only — no dependencies, no install step.
 | `SKILL.md` | Skill definition: procedure (phases 0–5), decision rules, loading map, JSON schema, report template, guardrails |
 | `references/` | Curated legal knowledge base: `statutes.md`, `eu-law.md`, `pitfalls.md`, `case-law.md`, `checklists.md`, `glossary.md` |
 | `tools/render_report.py` | Stdlib-only markdown-to-HTML report renderer |
-| `research/` + `RESEARCH.md` | Background research slices and the integration synthesis behind the knowledge base |
 | `output/` | Private run artifacts (contract OCR, page scans, generated reports) — gitignored, never committed |
 
 ## Disclaimer

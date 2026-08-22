@@ -1,6 +1,6 @@
 # German Employment-Law Statutes — lookup
 
-**As of 2026-08-22.** Lookup reference for contract assessment under German law (EU overlay lives in `eu-law.md`). Every claim carries its statute section; every section block carries a URL. Annual verification note: currency figures and limits change **1 Jan** (Mindestlohn, BBG, Sachbezugswerte, Versicherungspflichtgrenze) and **1 Jul** (Pfändungsfreigrenzen); re-verify before each review run. Figures marked `[verified 2026-08-22]` were re-checked against the build-time verification memo (`research/verify-2026-08.md`) and its sources.
+**As of 2026-08-22.** Lookup reference for contract assessment under German law (EU overlay lives in `eu-law.md`). Every claim carries its statute section; every section block carries a URL. Annual verification note: currency figures and limits change **1 Jan** (Mindestlohn, BBG, Sachbezugswerte, Versicherungspflichtgrenze) and **1 Jul** (Pfändungsfreigrenzen); re-verify before each review run. Figures marked `[verified 2026-08-22]` were re-checked against primary sources (gesetze-im-internet.de, SvEV, DRV, AOK tables) on 2026-08-22.
 
 This is a research reference, not legal advice. Case-law citations are indexed in `case-law.md`.
 
@@ -302,7 +302,7 @@ In force 1.8.2022 (BGBl. I 2022, S. 1170). `https://www.gesetze-im-internet.de/n
 | **eAU** | mandatory since 1.1.2023 (statutory-insured) | § 5(1a) EFZG; `https://www.gesetze-im-internet.de/entgfg/__5.html` |
 | **SGB VI § 41 pensioner fixed-term** | max 8 years / 12 contracts (from 1.1.2026) `[verified 2026-08-22]` | § 41 SGB VI; `https://www.gesetze-im-internet.de/sgb_6/__41.html` |
 
-**Verification cadence:** Mindestlohn, BBG, Sachbezugswerte, Minijob-Grenze, Versicherungspflichtgrenze → 1 Jan; Pfändungsfreigrenzen → 1 Jul. Sachbezugswerte 2027 not yet published — **do not hard-code beyond 31.12.2026** (`research/verify-2026-08.md` § 1).
+**Verification cadence:** Mindestlohn, BBG, Sachbezugswerte, Minijob-Grenze, Versicherungspflichtgrenze → 1 Jan; Pfändungsfreigrenzen → 1 Jul. Sachbezugswerte 2027 not yet published — **do not hard-code beyond 31.12.2026**.
 
 ---
 

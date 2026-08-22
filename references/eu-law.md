@@ -1,6 +1,6 @@
 # EU Employment Law Layer — lookup
 
-**As of 2026-08-22.** Lookup reference for the EU-law overlay on German employment-contract assessment (German statutory layer lives in `statutes.md`; case-law whitelist in `case-law.md`). Every directive block carries its German transposition vehicle, status flag, and source URL. Transposition status and figures verified against `research/verify-2026-08.md`; where the memo and research differ, the memo wins. This is a research reference, not legal advice.
+**As of 2026-08-22.** Lookup reference for the EU-law overlay on German employment-contract assessment (German statutory layer lives in `statutes.md`; case-law whitelist in `case-law.md`). Every directive block carries its German transposition vehicle, status flag, and source URL. Transposition status and figures were verified by web search against EUR-Lex, gesetze-im-internet.de, Bundestag documents, and practitioner commentary on 2026-08-22. This is a research reference, not legal advice.
 
 **Top-line status flags (2026-08):**
 - **Pay Transparency (EU) 2023/970** — deadline 7.6.2026 **missed**; no German statute. Binding on public employers since 8.6.2026 (vertical direct effect); private employers: Art. 157 TFEU + conforming interpretation; Art. 7(6) pay-secrecy clauses void.
