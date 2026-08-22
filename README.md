@@ -102,11 +102,11 @@ Stdlib only: no dependencies, no install step.
 
 ## Deutsche Zusammenfassung
 
-- **Was ist das?** Eine fertige Agent-Skill, die komplette deutsche Arbeitsverträge Klausel für Klausel auf rechtliche Risiken prüft: Befristung, Probezeit, Überstundenabgeltung, Wettbewerbsverbote, AGB-Kontrolle, NachwG-Pflichtangaben und gesetzliche Mindeststandards, mit verifizierter Rechtsgrundlage (Gesetzestext oder Whitelist-Rechtsprechung) und Risikobewertung je Befund.
+- **Was ist das?** Eine fertige Agent-Skill, die komplette deutsche Arbeitsverträge Klausel für Klausel auf rechtliche Risiken prüft: Befristung, Probezeit, Überstundenabgeltung, Wettbewerbsverbote, AGB-Kontrolle, NachwG-Pflichtangaben und gesetzliche Mindeststandards (MiLoG, ArbZG, BUrlG, EFZG, KSchG, TzBfG, EntgTranspG), mit EU-Rechts-Overlay, verifizierter Rechtsgrundlage (Gesetzestext oder Whitelist-Rechtsprechung) und Risikobewertung je Befund.
 - **Was liefert es?** `report.md` (menschenlesbar), `report.json` (maschinenlesbar, JSON Schema draft 2020-12) und `report.html` (selbstständige HTML-Ansicht), zweisprachig DE/EN.
 - **Start:** Klone das Repository, registriere `SKILL.md` als Skill und triggere z. B. mit *„Prüfe diesen Arbeitsvertrag"*. Details unter [Usage](#usage).
-- **Aktualität:** `law_as_of: 2026-08-22`; das Wissen wird gepflegt (siehe [CHANGELOG.md](CHANGELOG.md)).
-- **Rechtshinweis:** Dies ist keine Rechtsberatung; siehe [Disclaimer](#disclaimer).
+- **Aktualität:** Rechtsstand `2026-08-22` (JSON-Feld `law_as_of`); das Wissen wird gepflegt (siehe [CHANGELOG.md](CHANGELOG.md)).
+- **Rechtshinweis:** Keine Rechtsberatung. Ausgabe sind Risiko- und Wirksamkeitseinschätzungen zu Vertragsklauseln, keine Garantien; das Recht kann sich nach dem ausgewiesenen Rechtsstand ändern. Bei kritischen Befunden, finanzieller Tragweite oder ungeklärter Rechtslage wird automatisch zu anwaltlicher Prüfung geraten. Details: [License & disclaimer](#license--disclaimer).
 
 ## Development
 
