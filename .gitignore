@@ -1,0 +1,30 @@
+# Private run artifacts — NEVER commit.
+# output/ contains real contract OCR text, page scans (PNG), and generated
+# reports with verbatim clause quotes: employee name, addresses, salary figure,
+# contract metadata. All of it is personal data (PII) — excluding the whole
+# directory is the single required exclusion from the pre-release security audit
+# (2026-08-22). Do not add exceptions here.
+output/
+
+# --- Environment & secrets ---
+# Local configuration and secret material; never commit real credentials.
+.env
+.env.*
+
+# --- Python ---
+# Virtual environments and bytecode caches for the stdlib-only renderer
+# (tools/render_report.py).
+.venv/
+__pycache__/
+*.py[cod]
+
+# --- Editors / OS ---
+# Local editor and OS droppings; machine-specific, no release value.
+.idea/
+.vscode/
+.DS_Store
+*.swp
+
+# --- Logs ---
+# Transient runtime logs; noise in a release repo.
+*.log

@@ -1,0 +1,7 @@
+# Normalize line endings to LF on checkout; avoid spurious diffs.
+* text=auto
+
+# Binary assets: page scans and scanned contract PDFs must never be
+# normalized or diffed as text.
+*.png binary
+*.pdf binary
