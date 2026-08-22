@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contract Review Report — Befristeter Arbeitsvertrag · Muster GmbH / Erika Mustermann</title>
+<style>
+:root {
+  --critical: #b3261e; --high: #d95f00; --medium: #9a6b00; --low: #2e7d32;
+  --ink: #1c1c1e; --muted: #6b6b70; --line: #e2e2e6; --bg: #ffffff; --soft: #f6f6f8;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink); background: var(--bg); margin: 0; line-height: 1.55; font-size: 15px;
+}
+.wrap { max-width: 920px; margin: 0 auto; padding: 40px 28px 80px; }
+h1 { font-size: 1.6em; margin: 0 0 4px; line-height: 1.25; }
+h2 {
+  font-size: 1.15em; margin: 34px 0 10px; padding-top: 14px; border-top: 2px solid var(--line);
+}
+h2:first-of-type { border-top: 0; padding-top: 0; }
+h3 { font-size: 1.02em; margin: 20px 0 6px; }
+p { margin: 8px 0; }
+.meta { color: var(--muted); font-size: 0.92em; margin: 6px 0 0; }
+strong { font-weight: 650; }
+code { background: var(--soft); border: 1px solid var(--line); border-radius: 4px;
+  padding: 0 4px; font-size: 0.9em; }
+a { color: #0b57d0; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 0.93em; }
+th, td { border: 1px solid var(--line); padding: 7px 10px; text-align: left; vertical-align: top; }
+th { background: var(--soft); font-weight: 650; }
+tbody tr:nth-child(even) { background: #fafafc; }
+ul, ol { margin: 8px 0; padding-left: 26px; }
+li { margin: 4px 0; }
+.badge {
+  display: inline-block; border-radius: 999px; padding: 1px 10px; font-size: 0.82em;
+  font-weight: 650; white-space: nowrap; color: #fff;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+.badge.critical { background: var(--critical); }
+.badge.high { background: var(--high); }
+.badge.medium { background: #b8860b; color: #fff; }
+.badge.low { background: var(--low); }
+.badge.p1 { background: var(--critical); }
+.badge.p2 { background: var(--high); }
+.badge.p3 { background: var(--medium); }
+.badge.p4 { background: var(--low); }
+details.clause { border: 1px solid var(--line); border-radius: 8px; margin: 10px 0;
+  background: #fcfcfd; }
+details.clause summary { cursor: pointer; padding: 9px 14px; font-weight: 650; list-style: none; }
+details.clause summary::-webkit-details-marker { display: none; }
+details.clause summary::before { content: "▸ "; color: var(--muted); }
+details.clause[open] summary::before { content: "▾ "; }
+details.clause > div { padding: 2px 16px 12px; }
+details.clause ul { padding-left: 20px; }
+.print-btn {
+  position: fixed; top: 16px; right: 16px; z-index: 50;
+  background: var(--ink); color: #fff; border: 0; border-radius: 999px;
+  padding: 9px 18px; font-size: 0.9em; font-weight: 600; cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+.print-btn:hover { background: #000; }
+@media print {
+  body { font-size: 11.5pt; }
+  .wrap { max-width: none; padding: 0; }
+  .print-btn { display: none; }
+  h2 { border-top-color: #000; page-break-after: avoid; }
+  h3, details.clause { page-break-inside: avoid; }
+  tr { page-break-inside: avoid; }
+  a { color: inherit; text-decoration: none; }
+  details.clause { border-color: #999; background: #fff; }
+  details.clause > div { display: block !important; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Contract Review Report — Befristeter Arbeitsvertrag · Muster GmbH / Erika Mustermann</h1>
+<p class="meta"><strong>Law as of:</strong> 2026-08-22 · <strong>Report language:</strong> de · <strong>Extraction confidence:</strong> hoch</p>
+<section>
+<h2>At a glance</h2>
+<p>Standardformular-Befristungsvertrag der Muster GmbH (dritte aufeinanderfolgende Befristung, kein sachlicher Grund); AGB-Prüfung angewendet. Befunde: 1 kritisch, 1 hoch, 1 niedrig. Der kritische Befund zur Befristung erfordert vor Unterschrift eine anwaltliche Prüfung.</p>
+<ul>
+<li><strong>F001 (Kritisch)</strong> — Die dritte Befristung ohne sachlichen Grund ist sehr wahrscheinlich unwirksam (unwirksam = bindet dich in der Befristung nicht); das Arbeitsverhältnis gilt dann als unbefristet fortbestehend und endet nicht am 28.02.2028.</li>
+<li><strong>F002 (Hoch)</strong> — Die verspätete Niederschrift verschiebt die Beweislast zu deinem Vorteil (bestrittene Vertragsbedingungen gelten zu deinen Gunsten als vereinbart) und kann den Arbeitgeber bis 2.000 € kosten.</li>
+<li><strong>F003 (Niedrig)</strong> — Der Arbeitszeitband ohne Kriterien ist ein Transparenzrisiko (dürfte im Streit gegen den Arbeitgeber ausgelegt werden); kein akuter Handlungsbedarf.</li>
+</ul>
+<h3>Severity scale — fixed plain definitions (print verbatim, every report)</h3>
+<table>
+<thead><tr><th>Label</th><th>Plain meaning</th></tr></thead>
+<tbody>
+<tr><td>Kritisch</td><td>Klausel ist unwirksam (rechtlich wirkungslos), bindet dich nicht, Handlungsbedarf vor Fristen</td></tr>
+<tr><td>Hoch</td><td>Sehr wahrscheinlich unwirksam oder erhebliches Risiko — prüfen lassen</td></tr>
+<tr><td>Mittel</td><td>Nur unter engen Bedingungen wirksam oder risikobehaftet</td></tr>
+<tr><td>Niedrig</td><td>Gestaltungsschwäche / Transparenzproblem, kein akuter Handlungsbedarf</td></tr>
+</tbody></table>
+<h3>Top risks (one plain sentence each: ID + severity + one-line legal pointer; citations stay in annex)</h3>
+<ol>
+<li><strong>F001 (Kritisch)</strong> — Dritte sachgrundlose Befristung trotz Vorbeschäftigung beim selben Arbeitgeber: § 14 Abs. 2 Satz 2 TzBfG sperrt die Befristung, der Vertrag ist unbefristet.</li>
+<li><strong>F002 (Hoch)</strong> — Niederschrift nach § 2 Abs. 1 NachwG erst 3 Wochen nach Arbeitsbeginn übergeben; Beweislastumkehr nach § 4 Satz 1 NachwG, Bußgeld bis 2.000 €.</li>
+<li><strong>F003 (Niedrig)</strong> — Verteilung der Arbeitszeit „nach betrieblichen Erfordernissen&quot; ohne Kriterien: Transparenzdefizit nach § 307 Abs. 1 Satz 2 BGB, kein Verstoß gegen das ArbZG ersichtlich.</li>
+</ol>
+</section>
+<section>
+<h2>Action plan</h2>
+<p>&lt;Uncertainty legend: hoch → „—&quot;; mittel → „mittlere Sicherheit — vor Umsetzung bestätigen lassen&quot;; niedrig → „niedrige Sicherheit — verifizieren&quot;; law_in_flux → „Rechtslage in Bewegung — Reform nicht in Kraft&quot;; extraction niedrig → „OCR-unsicher — am Original prüfen&quot;.&gt;</p>
+<table>
+<thead><tr><th>#</th><th>Priorität</th><th>Finding</th><th>Wer handelt</th><th>Aktion (eine verständliche Handlungszeile)</th><th>Unsicherheit</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><span class="badge p1">1</span></td><td>—</td><td>Du</td><td>Anwalt einschalten: Klärung, ob das Arbeitsverhältnis unbefristet fortbesteht (F001) und ob Ansprüche aus der verspäteten Niederschrift bestehen (F002).</td><td>—</td></tr>
+<tr><td>2</td><td><span class="badge p1">1</span></td><td><a href="#annex-F001">F001</a></td><td>Du / Anwalt</td><td>Entfristung geltend machen; Frist des § 17 TzBfG (3 Wochen nach schriftlicher Mitteilung) beachten; keine Verlängerungsunterschrift ohne Rechtsrat.</td><td>—</td></tr>
+<tr><td>3</td><td><span class="badge p2">2</span></td><td><a href="#annex-F002">F002</a></td><td>Arbeitgeber</td><td>Schriftliche Nachbesserung verlangen: vollständige Niederschrift nach § 2 Abs. 1 NachwG inkl. Sonderzahlungsbedingungen (Nr. 13).</td><td>—</td></tr>
+<tr><td>4</td><td><span class="badge p3">3</span></td><td><a href="#annex-F003">F003</a></td><td>Arbeitgeber</td><td>Arbeitszeitband konkretisieren (Kernzeit, Verteilungsrahmen, Ausgleichsfenster); sonst Transparenzrisiko im Streitfall.</td><td>mittlere Sicherheit — vor Umsetzung bestätigen lassen</td></tr>
+</tbody></table>
+</section>
+<section>
+<h2>Contract metadata</h2>
+<table>
+<thead><tr><th>Feld</th><th>Wert</th></tr></thead>
+<tbody>
+<tr><td>Jurisdiktionsannahme</td><td>german</td></tr>
+<tr><td>Vertragstyp</td><td>standard-form</td></tr>
+<tr><td>AGB-Prüfung angewendet</td><td>ja</td></tr>
+<tr><td>Analysierte Klauseln</td><td>4</td></tr>
+</tbody></table>
+</section>
+<section>
+<h2>Findings table</h2>
+<table>
+<thead><tr><th>ID</th><th>Klausel</th><th>Kategorie</th><th>Schwere</th><th>Rechtliche Einordnung</th><th>Was das für dich bedeutet</th><th>Sicherheit</th></tr></thead>
+<tbody>
+<tr><td><a href="#annex-F001">F001</a></td><td>C01</td><td>Befristung (Kettenbefristung)</td><td><span class="badge critical">Kritisch</span></td><td>§ 14 Abs. 2 Satz 2 TzBfG sperrt die sachgrundlose Befristung bei Vorbeschäftigung; Befristung unwirksam (§ 16 TzBfG)</td><td>Du bist unbefristet beschäftigt; der Vertrag endet nicht am 28.02.2028</td><td>hoch</td></tr>
+<tr><td><a href="#annex-F002">F002</a></td><td>C02</td><td>NachwG</td><td><span class="badge high">Hoch</span></td><td>§ 2 Abs. 1 NachwG: Niederschrift verspätet und unvollständig; § 4 Satz 1 Beweislastumkehr, § 4 Satz 3 Bußgeld bis 2.000 €</td><td>Bestrittene Vertragsbedingungen gelten zu deinen Gunsten als vereinbart</td><td>hoch</td></tr>
+<tr><td><a href="#annex-F003">F003</a></td><td>C03</td><td>Arbeitszeit (Transparenz)</td><td><span class="badge low">Niedrig</span></td><td>§ 307 Abs. 1 Satz 2 BGB: Arbeitszeitband ohne Kriterien intransparent; kein ArbZG-Verstoß ersichtlich</td><td>Im Streit dürfte die Verteilung zu deinen Gunsten ausgelegt werden</td><td>mittel</td></tr>
+</tbody></table>
+</section>
+<section>
+<h2>Risk profile</h2>
+<ul>
+<li><strong>Zählung:</strong> Kritisch 1 · Hoch 1 · Mittel 0 · Niedrig 1.</li>
+<li><strong>F001 (Kritisch)</strong> — Kettenbefristung ohne Sachgrund: Rechtsfolge ist die Entfristung, nicht die Beendigung. Zentrale Frage des Vertrags; rechtliche Mechanik in der Annex-Stelle C01.</li>
+<li><strong>F002 (Hoch)</strong> — NachwG-Verstoß mit Beweislastumkehr; finanzielle Exposition des Arbeitgebers (Bußgeld bis 2.000 €), kein direkter Anspruch für dich.</li>
+<li><strong>F003 (Niedrig)</strong> — Transparenzdefizit, faktisch nur im Streit relevant.</li>
+<li><code>critical_findings: true</code> — Seek-Counsel-Trigger ist ausgelöst (erste Aktionszeile).</li>
+</ul>
+</section>
+<section>
+<h2>Cross-cutting checks</h2>
+<ul>
+<li><strong>NachwG § 2(1) completeness:</strong> unvollständig. Angaben zu Nr. 2–6, 9, 10 nicht innerhalb von 7 Tagen nach Arbeitsbeginn; Nr. 13 (Sonderzahlungen) fehlt vollständig. Ein vollständiger schriftlicher Vertrag nach § 2 Abs. 5 NachwG liegt nicht vor (Niederschrift erst nach 3 Wochen, ohne Sonderzahlungsbedingungen). Beweislastumkehr § 4 Satz 1, Bußgeldrahmen § 4 Satz 3 (bis 2.000 €).</li>
+<li><strong>Whole-contract AGB review:</strong> Formularvertrag (keine handschriftlichen Änderungen, mehrfachverwendungsfähige Vorlagenformulierung). § 305c Abs. 2 BGB (Unklarheitenregel) wirkt zugunsten der Arbeitnehmerin beim Arbeitszeitband. Die salvatorische Klausel in § 7 kann eine unwirksame Befristung nicht heilen (§ 306 BGB; geltungserhaltende Reduktion unzulässig).</li>
+<li><strong>Statutory-floor sweep:</strong> 4.200,00 € brutto / 39 h pro Woche ≈ 24,85 €/h ≥ MiLoG 13,90 €/h (2026) und 14,60 €/h (ab 1.1.2027) — keine Unterschreitung. 39 h/Woche innerhalb des ArbZG-Rahmens (8 h/Tag bei 5-Tage-Woche); keine Ruhezeitproblematik ersichtlich.</li>
+<li><strong>Contradictions:</strong> keine zwischen Klauseln; kein TV/BV-Bezug im Vertrag (NachwG Nr. 14 entfällt mangels Tarifbindung).</li>
+</ul>
+</section>
+<section>
+<h2>Clause-by-clause annex</h2>
+<details class="clause"><summary>C01 · § 1 Laufzeit</summary><div>
+</div></details>
+<p>&gt; „Das Arbeitsverhältnis beginnt am 1. September 2026 und ist befristet bis zum 28. Februar 2028. Es handelt sich um die dritte aufeinanderfolgende befristete Anstellung bei der Muster GmbH; ein sachlicher Grund für die Befristung besteht nicht.&quot;</p>
+<ul>
+<li id="annex-F001"><strong>F001 (Kritisch)</strong> — Kettenbefristung: dritte aufeinanderfolgende sachgrundlose Befristung trotz Vorbeschäftigung beim selben Arbeitgeber. § 14 Abs. 2 Satz 2 TzBfG sperrt die sachgrundlose Befristung bei Vorbeschäftigung (BVerfG, Beschl. v. 06.06.2018 – 1 BvL 7/14; BAG, Urt. v. 23.01.2019 – 7 AZR 733/16). Rechtsfolge: Befristung unwirksam, unbefristetes Arbeitsverhältnis (§ 16 TzBfG); Geltendmachung binnen 3 Wochen nach schriftlicher Mitteilung (§ 17 TzBfG). Confidence: hoch.</li>
+<li><strong>Was zu tun ist:</strong> Anwalt einschalten und Entfristung geltend machen; keine Unterschrift auf eine Verlängerung ohne Rechtsrat.</li>
+<li><strong>Empfohlene Formulierung:</strong> „Unbefristetes Arbeitsverhältnis; eine erneute Befristung nur mit schriftlich benanntem sachlichem Grund nach § 14 Abs. 1 TzBfG.&quot;</li>
+</ul>
+<details class="clause"><summary>C02 · § 3 Vergütung</summary><div>
+</div></details>
+<p>&gt; „Die monatliche Bruttovergütung beträgt 4.200,00 € bei einer wöchentlichen Arbeitszeit von 39 Stunden. Ein Weihnachtsgeld wird gewährt.&quot;</p>
+<ul>
+<li id="annex-F002"><strong>F002 (Hoch)</strong> — NachwG: Niederschrift nach § 2 Abs. 1 NachwG erst 3 Wochen nach Arbeitsbeginn übergeben; Angaben zu Nr. 2–6, 9, 10 nicht innerhalb der 7-Tage-Frist; Nr. 13 (Sonderzahlungen) nicht konkretisiert (Weihnachtsgeld ohne Höhe, Fälligkeit, Rückzahlungsbedingungen). § 4 Satz 1 NachwG: Beweislastumkehr zugunsten der Arbeitnehmerin; § 4 Satz 3: Bußgeld bis 2.000 €. Confidence: hoch.</li>
+<li><strong>Was zu tun ist:</strong> Schriftliche Nachbesserung verlangen; Sonderzahlungsbedingungen (Höhe, Fälligkeit, Rückzahlung) schriftlich fixieren.</li>
+<li><strong>Empfohlene Formulierung:</strong> „Die Niederschrift nach § 2 Abs. 1 NachwG wird spätestens am ersten Arbeitstag übergeben und enthält alle 15 Angaben, einschließlich Höhe, Fälligkeit und Rückzahlungsbedingungen der Sonderzahlung.&quot;</li>
+</ul>
+<details class="clause"><summary>C03 · § 5 Arbeitszeit</summary><div>
+</div></details>
+<p>&gt; „Die wöchentliche Arbeitszeit beträgt 39 Stunden. Die Lage der Arbeitszeit richtet sich nach den betrieblichen Erfordernissen.&quot;</p>
+<ul>
+<li id="annex-F003"><strong>F003 (Niedrig)</strong> — Transparenzdefizit: Verteilung der Arbeitszeit ohne Kriterien (keine Kernzeit, kein Verteilungsrahmen, kein Ausgleichsfenster) — § 307 Abs. 1 Satz 2 BGB. Kein Verstoß gegen das ArbZG ersichtlich (39 h/Woche); kein Abrufarbeitsverhältnis nach § 12 TzBfG. Confidence: mittel.</li>
+<li><strong>Was zu tun ist:</strong> Arbeitszeitband konkretisieren (Kernzeit, Rahmen, Ausgleichsfenster); keine rechtliche Unwirksamkeit, aber Klarstellungsbedarf.</li>
+<li><strong>Empfohlene Formulierung:</strong> „Die wöchentliche Arbeitszeit beträgt 39 Stunden im 6-Monats-Ausgleichsfenster. Kernzeit ist montags bis freitags 9–15 Uhr; der Arbeitszeitrahmen liegt zwischen 7 und 19 Uhr.&quot;</li>
+</ul>
+<details class="clause"><summary>C04 · § 7 Schlussbestimmungen</summary><div>
+</div></details>
+<p>&gt; „Änderungen dieses Vertrags bedürfen der Schriftform. Sollten einzelne Bestimmungen unwirksam sein, bleibt der Vertrag im Übrigen wirksam.&quot;</p>
+<ul>
+<li><strong>Kein Befund (no_issue_found):</strong> Schriftformklausel und salvatorische Klausel sind Standardformulierung. Hinweis: Die salvatorische Klausel kann eine unwirksame Befristung nicht heilen (§ 306 BGB, keine geltungserhaltende Reduktion) — verweist auf F001.</li>
+</ul>
+</section>
+<section>
+<h2>Disclaimer</h2>
+<p><strong>Das ist keine Rechtsberatung.</strong> Dieser Bericht bewertet Risiken und Wirksamkeit von Vertragsklauseln — Befunde, keine Garantien für Wirksamkeit, Unwirksamkeit oder Prozessausgang. Das Recht ist auf das im Bericht genannte Datum fixiert (Law as of: 2026-08-22) und kann sich ändern; Beträge und Schwellen werden vor jedem Lauf neu verifiziert. Eingebaute Seek-Counsel-Trigger lösen bei jedem kritischen Befund, bei hohen Befunden mit finanzieller Exposition oder bei zentralen Klauseln mit ungesicherter Rechtslage eine Verweisung an einen Anwalt aus. Es werden ausschließlich verifizierte Quellen zitiert: keine Aktenzeichen ohne Whitelist- oder web-verifizierte Quelle. Bei Zweifeln: Fachanwalt für Arbeitsrecht in Deutschland konsultieren.</p>
+</section>
+</div>
+<script>
+function printReport() { window.print(); }
+var before = function () {
+  document.querySelectorAll('details.clause').forEach(function (d) {
+    if (!d.hasAttribute('open')) { d.dataset.autoOpen = '1'; d.setAttribute('open', ''); }
+  });
+};
+var after = function () {
+  document.querySelectorAll('details.clause[data-auto-open]').forEach(function (d) {
+    d.removeAttribute('open'); delete d.dataset.autoOpen;
+  });
+};
+window.addEventListener('beforeprint', before);
+window.addEventListener('afterprint', after);
+document.addEventListener('DOMContentLoaded', function () {
+  var btn = document.createElement('button');
+  btn.className = 'print-btn'; btn.type = 'button'; btn.textContent = 'Drucken';
+  btn.addEventListener('click', printReport);
+  document.body.appendChild(btn);
+});
+</script>
+</body>
+</html>

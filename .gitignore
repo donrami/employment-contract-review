@@ -28,3 +28,7 @@ __pycache__/
 # --- Logs ---
 # Transient runtime logs; noise in a release repo.
 *.log
+
+# --- Internal audit/planning artifacts ---
+# Audit pipeline, distribution strategy, pre-release timestamps — never commit.
+research/

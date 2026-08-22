@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Fictional sample — not a real contract; generated for demonstration.",
+  "schema_version": "1.0",
+  "law_as_of": "2026-08-22",
+  "contract": {
+    "id": "sample-muster-gmbh-2026-08-22",
+    "title": "Befristeter Arbeitsvertrag · Muster GmbH / Erika Mustermann",
+    "language": "de",
+    "jurisdiction_assumption": "german",
+    "contract_type": "standard-form",
+    "is_agb": true,
+    "clause_count": 4,
+    "extraction_confidence": "high"
+  },
+  "risk_profile": {
+    "counts": { "Critical": 1, "High": 1, "Medium": 0, "Low": 1 },
+    "top_risks": [
+      "F001 Critical — Dritte sachgrundlose Befristung trotz Vorbeschäftigung beim selben Arbeitgeber: Befristung unwirksam (§ 14 Abs. 2 Satz 2, § 16 TzBfG), unbefristetes Arbeitsverhältnis.",
+      "F002 High — Niederschrift nach § 2 Abs. 1 NachwG verspätet und unvollständig: Beweislastumkehr § 4 Satz 1, Bußgeld bis 2.000 € (§ 4 Satz 3 NachwG).",
+      "F003 Low — Arbeitszeitband ohne Kriterien: Transparenzdefizit § 307 Abs. 1 Satz 2 BGB."
+    ],
+    "critical_findings": true
+  },
+  "cross_cutting": {
+    "nachwg": {
+      "complete": false,
+      "missing_items": [2, 3, 4, 5, 6, 9, 10, 13],
+      "deadline_violations": [
+        "Niederschrift erst 3 Wochen nach Arbeitsbeginn (Frist: 7 Tage, § 2 Abs. 1 NachwG)",
+        "Angaben Nr. 13 (Sonderzahlungen) fehlen vollständig"
+      ]
+    },
+    "agb_whole_contract": "Formularvertrag ohne handschriftliche Änderungen; § 305c Abs. 2 BGB zugunsten der Arbeitnehmerin beim Arbeitszeitband. Salvatorische Klausel (§ 7) kann eine unwirksame Befristung nicht heilen (§ 306 BGB).",
+    "statutory_floor": [
+      "4.200,00 € / 39 h ≈ 24,85 €/h ≥ MiLoG 13,90 €/h (2026) und 14,60 €/h (ab 1.1.2027) — keine Unterschreitung",
+      "39 h/Woche innerhalb des ArbZG-Rahmens (8 h/Tag bei 5-Tage-Woche)"
+    ],
+    "contradictions": []
+  },
+  "findings": [
+    {
+      "id": "F001",
+      "clause": {
+        "clause_id": "C01",
+        "clause_id_orig": "§ 1 Laufzeit",
+        "quote": "Das Arbeitsverhältnis beginnt am 1. September 2026 und ist befristet bis zum 28. Februar 2028. Es handelt sich um die dritte aufeinanderfolgende befristete Anstellung bei der Muster GmbH; ein sachlicher Grund für die Befristung besteht nicht."
+      },
+      "category": "Befristung (Kettenbefristung)",
+      "pitfall_id": "P6",
+      "issue": "Dritte aufeinanderfolgende sachgrundlose Befristung trotz Vorbeschäftigung beim selben Arbeitgeber; § 14 Abs. 2 Satz 2 TzBfG sperrt die sachgrundlose Befristung.",
+      "legal_basis": [
+        "§ 14 Abs. 2 Satz 2 TzBfG",
+        "§ 16 TzBfG",
+        "§ 17 TzBfG",
+        "BVerfG 1 BvL 7/14, 1 BvR 1375/14 (6.6.2018)",
+        "BAG 7 AZR 733/16 (23.1.2019)"
+      ],
+      "severity": "Critical",
+      "confidence": "high",
+      "law_in_flux": false,
+      "recommended_action": "Anwalt einschalten und Entfristung geltend machen; keine Verlängerungsunterschrift ohne Rechtsrat.",
+      "recommended_wording": "Unbefristetes Arbeitsverhältnis; eine erneute Befristung nur mit schriftlich benanntem sachlichem Grund nach § 14 Abs. 1 TzBfG.",
+      "sources": [
+        "https://www.bundesarbeitsgericht.de/entscheidung/7-azr-733-16/",
+        "https://cms.law/de/deu/legal-updates/Handlungsbedarf-bei-befristeten-Arbeitsverhaeltnissen-Bundesverfassungsgericht-kippt-BAG-Rechtsprechung-zur-Vorbeschaeftigung"
+      ]
+    },
+    {
+      "id": "F002",
+      "clause": {
+        "clause_id": "C02",
+        "clause_id_orig": "§ 3 Vergütung",
+        "quote": "Die monatliche Bruttovergütung beträgt 4.200,00 € bei einer wöchentlichen Arbeitszeit von 39 Stunden. Ein Weihnachtsgeld wird gewährt."
+      },
+      "category": "NachwG",
+      "pitfall_id": null,
+      "issue": "Niederschrift nach § 2 Abs. 1 NachwG verspätet (3 Wochen statt 7 Tage) und unvollständig (Angaben Nr. 13 fehlen).",
+      "legal_basis": [
+        "§ 2 Abs. 1 NachwG",
+        "§ 4 Satz 1 NachwG",
+        "§ 4 Satz 3 NachwG"
+      ],
+      "severity": "High",
+      "confidence": "high",
+      "law_in_flux": false,
+      "recommended_action": "Schriftliche Nachbesserung verlangen: vollständige Niederschrift inklusive Sonderzahlungsbedingungen.",
+      "recommended_wording": "Die Niederschrift nach § 2 Abs. 1 NachwG wird spätestens am ersten Arbeitstag übergeben und enthält alle 15 Angaben, einschließlich Höhe, Fälligkeit und Rückzahlungsbedingungen der Sonderzahlung.",
+      "sources": [
+        "https://www.gesetze-im-internet.de/nachwg/"
+      ]
+    },
+    {
+      "id": "F003",
+      "clause": {
+        "clause_id": "C03",
+        "clause_id_orig": "§ 5 Arbeitszeit",
+        "quote": "Die wöchentliche Arbeitszeit beträgt 39 Stunden. Die Lage der Arbeitszeit richtet sich nach den betrieblichen Erfordernissen."
+      },
+      "category": "Arbeitszeit (Transparenz)",
+      "pitfall_id": null,
+      "issue": "Verteilung der Arbeitszeit ohne Kriterien (keine Kernzeit, kein Verteilungsrahmen, kein Ausgleichsfenster): Transparenzdefizit.",
+      "legal_basis": [
+        "§ 307 Abs. 1 Satz 2 BGB"
+      ],
+      "severity": "Low",
+      "confidence": "medium",
+      "law_in_flux": false,
+      "recommended_action": "Arbeitszeitband konkretisieren (Kernzeit, Rahmen, Ausgleichsfenster); keine Unwirksamkeit, aber Klarstellungsbedarf.",
+      "recommended_wording": "Die wöchentliche Arbeitszeit beträgt 39 Stunden im 6-Monats-Ausgleichsfenster. Kernzeit ist montags bis freitags 9–15 Uhr; der Arbeitszeitrahmen liegt zwischen 7 und 19 Uhr.",
+      "sources": []
+    }
+  ]
+}

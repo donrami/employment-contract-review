@@ -2,9 +2,9 @@
 
 ## Reporting a vulnerability
 
-Open a **GitHub issue** on this repository and apply the `security` label. Do not include
-confidential information, personal data, or real contract text in the issue. Issues are the only
-supported reporting channel — no email addresses are used for this project.
+Report via **private vulnerability reporting** (Settings → Code security → Private vulnerability reporting).
+Do not include contract text or PII; if you must share a contract, use a redacted fictional excerpt.
+Private reporting is the only supported channel — no email addresses are used for this project.
 
 ## Scope
 
@@ -22,7 +22,7 @@ Security-relevant areas of this project:
   assessments, not guarantees; when in doubt, consult a lawyer admitted in Germany.
 - **No secrets or PII belong in the repository.** `output/` holds private run artifacts (real
   contract OCR, page scans, generated reports) and is gitignored — never commit anything from it.
-  If you find personal data in any committed file, report it via the issue channel above.
+  If you find personal data in any committed file, report it via private vulnerability reporting.
 - Findings are limited to verified sources: statute sections, the `case-law.md` whitelist, or
   web-verified citations with URL and date. No fabricated citations.
 

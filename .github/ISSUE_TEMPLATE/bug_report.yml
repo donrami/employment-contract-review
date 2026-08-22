@@ -1,0 +1,73 @@
+name: Bug Report
+description: Report a wrong legal finding, missed clause class, renderer bug, or documentation error.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting. To keep reports actionable, please sanitize any contract excerpts before pasting: replace real names, addresses, and salary figures with placeholders ("[NAME]", "[ADDRESS]", "[EUR]"). Do not paste real contract text or PII — see SECURITY.md.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: The wrong finding, missed clause class, renderer output error, or documentation defect you observed.
+      placeholder: "The skill reported F-02 as High, but § 4 NachwG …"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect instead, and why (statute section, whitelisted case, or known law update)?
+      placeholder: "Expected a Critical finding citing § 14 Abs. 2 Satz 2 TzBfG because the employee previously worked for the same employer."
+    validations:
+      required: true
+  - type: dropdown
+    id: contract-type
+    attributes:
+      label: Contract type
+      description: Which contract type did you review?
+      options:
+        - Standard-form (AGB, form contract)
+        - Individually negotiated
+        - Unknown / not sure
+    validations:
+      required: true
+  - type: input
+    id: jurisdiction
+    attributes:
+      label: Jurisdiction signals
+      description: State (Bundesland), works council involvement, TV/BV references, or any conflict-of-laws signals present in the contract.
+      placeholder: "NRW, no works council, no TV reference, German governing law"
+  - type: dropdown
+    id: contract-source
+    attributes:
+      label: Contract used
+      description: Was the reviewed contract real or fictional?
+      options:
+        - Real contract (sanitized — no PII pasted below)
+        - Fictional sample
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: skill-phase
+    attributes:
+      label: Skill phase (if known)
+      description: Which phase produced the wrong output — 0 Intake, 1 Normalize, 2 Clause-by-clause, 3 Cross-cutting, 4 Risk scoring, 5 Report?
+      placeholder: "Phase 3 (Cross-cutting)"
+  - type: input
+    id: law-as-of
+    attributes:
+      label: law_as_of at time of review
+      description: The law date printed in the report header ("Law as of: …").
+      placeholder: "2026-08-22"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Trigger phrase used, input format (PDF/scan/docx/pasted text), and any relevant report artifacts (finding ID, clause ID).
+      placeholder: "1. Triggered with 'prüfe diesen Arbeitsvertrag' 2. Pasted sanitized clauses 3. Report says …"
