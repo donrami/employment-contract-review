@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Annotated contract PDF: `tools/annotate_contract.py` embeds every finding at its
+  clause location on the original scanned pages (yellow highlight, severity callout in a
+  dedicated gutter, cover sheet). Fourth report artifact, wired into SKILL.md Phase 5.
+  Gutter callouts size to fit the full recommended action, no truncation.
+
+### Fixed
+- Gutter callouts in the annotated PDF truncated long recommended-action texts; boxes now
+  size to fit the full text (with page-boundary clamping).
+
 ## [1.0.0] - 2026-08-22
 
 ### Added

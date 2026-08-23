@@ -79,7 +79,7 @@ Each phase completes its uncertainty and escalation exits before the next begins
 
 ## Report formats
 
-Every review produces the same content in three views:
+Every review produces the same content in four views:
 
 - **`report.json`**: canonical structured output, JSON Schema draft 2020-12.
 - **`report.md`**: the human-readable source of truth, with at-a-glance verdict, action plan, findings table, risk profile, cross-cutting checks, and a clause-by-clause annex.
@@ -89,7 +89,13 @@ Every review produces the same content in three views:
 python3 tools/render_report.py report.md report.html
 ```
 
-Stdlib only: no dependencies, no install step.
+- **`annotated-contract.pdf`**: the original contract pages, each finding highlighted at its clause (yellow box) with a severity callout in a dedicated right gutter; a cover sheet lists all findings. The gutter callout shows the full recommended action. Requires `tesseract` (OCR, `deu`), `Pillow`, and `reportlab`:
+
+```bash
+python3 tools/annotate_contract.py report.json contract_ocr.txt annotated-contract.pdf output/pg-*.png
+```
+
+The HTML view and markdown report are stdlib-only: no dependencies, no install step.
 
 ## Repository layout
 
@@ -98,12 +104,13 @@ Stdlib only: no dependencies, no install step.
 | `SKILL.md` | Skill definition: procedure (phases 0–5), decision rules, loading map, JSON schema, report template, guardrails |
 | `references/` | Curated legal knowledge base: `statutes.md`, `eu-law.md`, `pitfalls.md`, `case-law.md`, `checklists.md`, `glossary.md` |
 | `tools/render_report.py` | Stdlib-only markdown-to-HTML report renderer |
+| `tools/annotate_contract.py` | Annotated-contract-PDF renderer (OCR locate + highlight + gutter callouts) |
 | `output/` | Private run artifacts (contract OCR, page scans, generated reports); gitignored, never committed |
 
 ## Deutsche Zusammenfassung
 
 - **Was ist das?** Eine fertige Agent-Skill, die komplette deutsche Arbeitsverträge Klausel für Klausel auf rechtliche Risiken prüft: Befristung, Probezeit, Überstundenabgeltung, Wettbewerbsverbote, AGB-Kontrolle, NachwG-Pflichtangaben und gesetzliche Mindeststandards (MiLoG, ArbZG, BUrlG, EFZG, KSchG, TzBfG, EntgTranspG), mit EU-Rechts-Overlay, verifizierter Rechtsgrundlage (Gesetzestext oder Whitelist-Rechtsprechung) und Risikobewertung je Befund.
-- **Was liefert es?** `report.md` (menschenlesbar), `report.json` (maschinenlesbar, JSON Schema draft 2020-12) und `report.html` (selbstständige HTML-Ansicht), zweisprachig DE/EN.
+- **Was liefert es?** `report.md` (menschenlesbar), `report.json` (maschinenlesbar, JSON Schema draft 2020-12), `report.html` (selbstständige HTML-Ansicht) und `annotated-contract.pdf` (Originalseiten mit Markierungen), zweisprachig DE/EN.
 - **Start:** Klone das Repository, registriere `SKILL.md` als Skill und triggere z. B. mit *„Prüfe diesen Arbeitsvertrag"*. Details unter [Usage](#usage).
 - **Aktualität:** Rechtsstand `2026-08-22` (JSON-Feld `law_as_of`); das Wissen wird gepflegt (siehe [CHANGELOG.md](CHANGELOG.md)).
 - **Rechtshinweis:** Keine Rechtsberatung. Ausgabe sind Risiko- und Wirksamkeitseinschätzungen zu Vertragsklauseln, keine Garantien; das Recht kann sich nach dem ausgewiesenen Rechtsstand ändern. Bei kritischen Befunden, finanzieller Tragweite oder ungeklärter Rechtslage wird automatisch zu anwaltlicher Prüfung geraten. Details: [License & disclaimer](#license--disclaimer).
