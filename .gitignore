@@ -32,3 +32,7 @@ __pycache__/
 # --- Internal audit/planning artifacts ---
 # Audit pipeline, distribution strategy, pre-release timestamps — never commit.
 research/
+
+# --- Test fixtures ---
+# Generated on the fly by tests/test_annotate_contract.py (PNGs + report.json).
+tests/fixtures/

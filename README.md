@@ -8,7 +8,7 @@ Automated risk assessment of full German employment contracts (Arbeitsvertrag) u
 
 Machine skill id: `ger-employment-contract-review` · Law as of: 2026-08-22.
 
-> Clone → register SKILL.md as a skill → trigger with "prüfe diesen Arbeitsvertrag" → get report.md + report.json + report.html.
+> Clone → register SKILL.md as a skill → trigger with "prüfe diesen Arbeitsvertrag" → get report.md + report.json + report.html + annotated-contract.pdf.
 
 ## What it is
 
@@ -40,7 +40,7 @@ Full fictional samples: [`examples/sample-report.md`](examples/sample-report.md)
 - **NachwG § 2 completeness check**: all 15 mandatory items against the inventory, with day-1 / 7-day / 1-month deadline classes.
 - **Whole-contract AGB review**: transparency, surprising clauses, ambiguity-against-drafter, severability (for standard-form contracts).
 - **Statutory-floor sweep**: every monetary, leave, and working-time term against mandatory floors (MiLoG, ArbZG, BUrlG, EFZG, KSchG, TzBfG, EntgTranspG).
-- **Structured reports**: JSON (canonical), markdown (human-readable source of truth), and a self-contained HTML view.
+- **Structured reports**: JSON (canonical), markdown (human-readable source of truth), a self-contained HTML view, and an annotated contract PDF.
 - **Bilingual DE/EN**: findings reproducible in both languages via the glossary; detection of German, English, or mixed contracts.
 - **Citation whitelist**: findings cite only statute sections, the verified case-law whitelist, or web-verified sources with URLs; a hallucination firewall against fabricated case numbers.
 - **Law-as-of pinning**: every report prints `Law as of: 2026-08-22`; unsettled law is flagged `law_in_flux`, never applied early.
@@ -60,7 +60,7 @@ This is a self-contained skill definition, independent of any particular harness
    - "prüfe diesen Arbeitsvertrag"
 4. Supply a contract as PDF, scan, docx, pasted clauses, or URL.
 
-Outputs land as three files: `report.json` (canonical), `report.md` (human-readable report), and `report.html` (self-contained HTML view).
+Outputs land as four artifacts: `report.json` (canonical), `report.md` (human-readable report), `report.html` (self-contained HTML view), and `annotated-contract.pdf` (original contract pages with each finding marked at its clause).
 
 ## How it works
 
@@ -73,7 +73,7 @@ Five strictly sequential phases, each loading only the reference files it needs 
 | 2 · Clause-by-clause | Run the per-category checklists against each clause → candidate pitfall findings with verified legal basis |
 | 3 · Cross-cutting | NachwG § 2 completeness, whole-contract AGB review, statutory-floor sweep, collective-law interplay, contradictions |
 | 4 · Risk scoring | Severity per shared criteria; risk profile; confidence labels (high/medium/low) |
-| 5 · Report | Emit three artifacts: JSON, markdown, and a rendered HTML view |
+| 5 · Report | Emit four artifacts: JSON, markdown, a rendered HTML view, and an annotated contract PDF |
 
 Each phase completes its uncertainty and escalation exits before the next begins: unreadable documents are reported, not guessed; unsourced suspicions are downgraded or dropped, never asserted.
 
@@ -92,7 +92,7 @@ python3 tools/render_report.py report.md report.html
 - **`annotated-contract.pdf`**: the original contract pages, each finding highlighted at its clause (yellow box) with a severity callout in a dedicated right gutter; a cover sheet lists all findings. The gutter callout shows the full recommended action. Requires `tesseract` (OCR, `deu`), `Pillow`, and `reportlab`:
 
 ```bash
-python3 tools/annotate_contract.py report.json contract_ocr.txt annotated-contract.pdf output/pg-*.png
+python3 tools/annotate_contract.py report.json annotated-contract.pdf output/pg-*.png [--min-severity HIGH]
 ```
 
 The HTML view and markdown report are stdlib-only: no dependencies, no install step.
