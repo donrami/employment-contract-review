@@ -18,6 +18,16 @@ A self-contained skill that reviews a complete German employment contract and re
 
 *Fictional sample (Muster GmbH / Erika Mustermann), not a real contract. Real reports include contract metadata and verbatim clause quotes.*
 
+**Before → after** — clause highlighted, severity badge, right-gutter callout with legal basis, action, and suggested wording:
+
+![Annotated contract page after review](docs/media/demo-before-after.png)
+
+Zoomed gutter callout — severity color coding and legal basis legible:
+
+![Zoomed gutter callout](docs/media/demo-crop.png)
+
+Full annotated demo PDF (cover sheet + 4 pages, all fictional): [docs/media/annotated-contract.pdf](docs/media/annotated-contract.pdf)
+
 ```markdown
 ## At a glance
 - Contract: fixed-term employment contract · Muster GmbH · Erika Mustermann
@@ -104,6 +114,8 @@ The HTML view and markdown report are stdlib-only: no dependencies, no install s
 | `SKILL.md` | Skill definition: procedure (phases 0–5), decision rules, loading map, JSON schema, report template, guardrails |
 | `references/` | Curated legal knowledge base: `statutes.md`, `eu-law.md`, `pitfalls.md`, `case-law.md`, `checklists.md`, `glossary.md` |
 | `tools/render_report.py` | Stdlib-only markdown-to-HTML report renderer |
+| `tools/make_demo_contract.py` | Regenerates the synthetic demo contract + media in `docs/media/` |
+| `docs/media/` | README demo assets: synthetic contract pages, before/after, annotated demo PDF |
 | `tools/annotate_contract.py` | Annotated-contract-PDF renderer (OCR locate + highlight + gutter callouts) |
 | `output/` | Private run artifacts (contract OCR, page scans, generated reports); gitignored, never committed |
 
