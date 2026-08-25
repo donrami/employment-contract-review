@@ -35,4 +35,10 @@ research/
 
 # --- Test fixtures ---
 # Generated on the fly by tests/test_annotate_contract.py (PNGs + report.json).
+
+# --- Eval scratch ---
+# Runtime-fetched sebischair dataset copies and eval result JSONs; the dataset
+# is CC BY-NC 4.0 and must never be vendored (see eval/knowledge_eval.py).
+eval/cache/
+eval/results/
 tests/fixtures/

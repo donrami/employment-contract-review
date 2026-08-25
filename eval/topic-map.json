@@ -1,0 +1,136 @@
+{
+  "$comment": "Machine-readable mapping between the sebischair/Employment-Contract-Clauses-German v3_2026-01 topic taxonomy and ger-law's own knowledge base (references/pitfalls.md sections, SKILL.md Phase-1 clause types). License-clean by construction: contains only dataset topic identifiers (_id) and German topic labels, plus names/counts of our own files. No rule titles, rule text, clause content, or explanations. Regenerate/adjust by hand when the upstream topic set changes; eval/knowledge_eval.py hard-errors on staleness.",
+  "dataset": {
+    "source": "https://github.com/sebischair/Employment-Contract-Clauses-German",
+    "version": "v3_2026-01",
+    "license": "CC BY-NC 4.0",
+    "fetched_at_runtime_only": true
+  },
+  "targets": {
+    "pitfalls_file": "references/pitfalls.md",
+    "skill_file": "SKILL.md"
+  },
+  "topics": [
+    {
+      "topic_id": "678a5b21780e9d4cb9184931",
+      "topic": "Vergütung",
+      "rule_count_upstream_v3": 4,
+      "mapping": "full",
+      "pitfalls_section": { "number": 3, "name": "Remuneration" },
+      "skill_clause_types": ["remuneration"]
+    },
+    {
+      "topic_id": "678a5b35780e9d4cb9184943",
+      "topic": "Durchführung",
+      "rule_count_upstream_v3": 4,
+      "mapping": "partial",
+      "pitfalls_section": { "number": 13, "name": "Mobility & Workplace" },
+      "skill_clause_types": ["working-time", "transfer/change"],
+      "note": "Execution-of-work rules span workplace and working-time aspects; no single ger-law section covers all of it."
+    },
+    {
+      "topic_id": "678a5b3a780e9d4cb918494f",
+      "topic": "Kündigung/Beendigung",
+      "rule_count_upstream_v3": 4,
+      "mapping": "full",
+      "pitfalls_section": { "number": 2, "name": "Duration & Termination" },
+      "skill_clause_types": ["termination"]
+    },
+    {
+      "topic_id": "678a5b40780e9d4cb918495d",
+      "topic": "Leistungen",
+      "rule_count_upstream_v3": 0,
+      "mapping": "partial",
+      "pitfalls_section": { "number": 3, "name": "Remuneration" },
+      "skill_clause_types": [],
+      "note": "Fringe-benefit rules sit next to remuneration; no dedicated ger-law section."
+    },
+    {
+      "topic_id": "678a5b46780e9d4cb918496d",
+      "topic": "Krankheit",
+      "rule_count_upstream_v3": 1,
+      "mapping": "partial",
+      "pitfalls_section": { "number": 9, "name": "Family/Care & Disability" },
+      "skill_clause_types": [],
+      "note": "Sickness/EFZG continuation-of-pay has no dedicated ger-law section; nearest is section 9."
+    },
+    {
+      "topic_id": "678a5b4f780e9d4cb918498f",
+      "topic": "Urlaub",
+      "rule_count_upstream_v3": 2,
+      "mapping": "full",
+      "pitfalls_section": { "number": 4, "name": "Working Time & Leave" },
+      "skill_clause_types": ["leave"]
+    },
+    {
+      "topic_id": "678a5b54780e9d4cb91849a3",
+      "topic": "Verjährung",
+      "rule_count_upstream_v3": 0,
+      "mapping": "none",
+      "pitfalls_section": null,
+      "skill_clause_types": [],
+      "note": "Limitation periods are not covered by the pitfall catalog."
+    },
+    {
+      "topic_id": "678a5b5a780e9d4cb91849b9",
+      "topic": "Form",
+      "rule_count_upstream_v3": 2,
+      "mapping": "full",
+      "pitfalls_section": { "number": 12, "name": "Formalities & Documentation" },
+      "skill_clause_types": ["boilerplate"]
+    },
+    {
+      "topic_id": "678a5b60780e9d4cb91849d1",
+      "topic": "Pfändung/Abtretung",
+      "rule_count_upstream_v3": 2,
+      "mapping": "partial",
+      "pitfalls_section": { "number": 14, "name": "Special Clauses" },
+      "skill_clause_types": [],
+      "note": "Garnishment/assignment clauses fall under the special-clauses catch-all only."
+    },
+    {
+      "topic_id": "678a5b66780e9d4cb91849eb",
+      "topic": "Überstunden",
+      "rule_count_upstream_v3": 0,
+      "mapping": "full",
+      "pitfalls_section": { "number": 4, "name": "Working Time & Leave" },
+      "skill_clause_types": ["overtime"]
+    },
+    {
+      "topic_id": "678a5b6b780e9d4cb9184a07",
+      "topic": "Ausschlussfristen",
+      "rule_count_upstream_v3": 3,
+      "mapping": "partial",
+      "pitfalls_section": { "number": 14, "name": "Special Clauses" },
+      "skill_clause_types": [],
+      "note": "Contractual forfeiture periods sit under the special-clauses catch-all; no dedicated pitfalls."
+    },
+    {
+      "topic_id": "678a5b71780e9d4cb9184a25",
+      "topic": "Erfindungen",
+      "rule_count_upstream_v3": 0,
+      "mapping": "none",
+      "pitfalls_section": null,
+      "skill_clause_types": [],
+      "note": "Employee-invention clauses (ArbnErfG) are not covered."
+    },
+    {
+      "topic_id": "678a5b84780e9d4cb9184a45",
+      "topic": "Vertragsstrafe/Wettbewerbsverbot",
+      "rule_count_upstream_v3": 5,
+      "mapping": "partial",
+      "pitfalls_section": { "number": 5, "name": "Restrictive Covenants" },
+      "skill_clause_types": ["post-contractual restraint"],
+      "note": "Non-compete half maps to section 5; contractual-penalty half has no dedicated section."
+    },
+    {
+      "topic_id": "678a5b89780e9d4cb9184a67",
+      "topic": "Sonstiges",
+      "rule_count_upstream_v3": 3,
+      "mapping": "none",
+      "pitfalls_section": null,
+      "skill_clause_types": [],
+      "note": "Miscellaneous catch-all; intentionally unmapped."
+    }
+  ]
+}

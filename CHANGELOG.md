@@ -10,6 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - README demo media: synthetic (fully fictional) sample contract, before/after and
   zoomed-callout images, and a complete annotated demo PDF under `docs/media/`,
   regenerable via `tools/make_demo_contract.py`.
+- Eval tooling: knowledge-base coverage eval against the sebischair
+  Employment-Contract-Clauses-German dataset (`eval/knowledge_eval.py`,
+  smoke/sample modes; dataset fetched at runtime only — CC BY-NC 4.0, never
+  vendored) with staleness-checked topic mapping (`eval/topic-map.json`), plus
+  citation cross-check of dataset court references against the case-law.md
+  whitelist (`eval/citations/crosscheck.py`, report in `eval/citations/REPORT.md`).
 
 ## [1.1.0] - 2026-08-24
 
